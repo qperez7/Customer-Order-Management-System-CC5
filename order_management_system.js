@@ -29,6 +29,15 @@ function placeOrder(customerName,itemsOrdered) {
 console.log(orders.push(placeOrder));
 
 //Task 4: Create a Function to Calculate Total for an Order
-let totalprice = itemsOrdered.price
-let totalOrdered = totalprice.reduce((acc,currentvalue) => acc + currentvalue,0);
-console.log(totalOrdered);
+//let totalprice = itemsOrdered.price
+//let totalOrdered = totalprice.reduce((acc,currentvalue) => acc + currentvalue,0);
+//console.log(totalOrdered);
+
+//Task 5: Create a Function to Mark an Order as Completed
+function completeOrder(Name) {
+  if(  orders.find((customerName) => customerName === Name))
+    return {Name,status: "Completed"}
+  else
+  return {customerName:"Order is not found"}
+};
+console.log(completeOrder("Alice"));
