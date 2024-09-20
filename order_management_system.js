@@ -13,7 +13,10 @@ const orders = []
 console.log(orders);// Output: An empty array of orders
 
 // Task 3: Create a Function to Place an Order
-let itemsOrdered = ["Expresso","Latte"]
+var itemsOrdered = [
+    {name: "Expresso",price:3,quantity:1},
+    {name: 'Latte', price: 4, quantity: 3 },
+]
 
 function placeOrder(customerName,itemsOrdered) {
   if (itemsOrdered.forEach( item => {inventory.name}));
@@ -24,3 +27,8 @@ function placeOrder(customerName,itemsOrdered) {
         }
 }
 console.log(orders.push(placeOrder));
+
+//Task 4: Create a Function to Calculate Total for an Order
+let totalprice = itemsOrdered.price
+let totalOrdered = totalprice.reduce((acc,currentvalue) => acc + currentvalue,0);
+console.log(totalOrdered);
