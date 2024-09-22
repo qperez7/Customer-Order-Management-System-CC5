@@ -22,14 +22,15 @@ if(itemsOrdered.some(item => inventory.name === itemsOrdered.name))
     return {
         customerName,
         itemsOrdered,
-        status: "Pending"
+        status: "Pending",
+        updateitemsOrdered,
         }
 else 
 return {itemsOrdered:"error item not found"}
 }   
 let updateitemsOrdered =  inventory[0].quantity - itemsOrdered[0].quantity
 inventory.push(updateitemsOrdered)
-console.log(orders.push(placeOrder("Alice",itemsOrdered))); // Output: places order in order array
+console.log(orders.push(placeOrder("Alice",itemsOrdered))); // Output: places order in order array but could not get inventory array to update quantity
 
 //Task 4: Create a Function to Calculate Total for an Order
 function calculateOrderTotal() {
@@ -52,7 +53,9 @@ console.log(completeOrder('Alice'));// Output: Finds orders and marks them compl
 
 //Task 6: Create a Function to Check Pending Orders
 function checkPendingOrders(orders) {
-    orders.forEach(status => { if(status === "Pending")
+   if(orders.forEach(status => status === "Pending"))
     return customerName,itemsOrdered,status
-})};
-console.log(checkPendingOrders(orders)); // Output: is undefined there are no pending orders
+  else 
+  return "There are no pending orders"
+};
+console.log(checkPendingOrders(orders)); // Output: there are no pending orders
